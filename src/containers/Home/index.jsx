@@ -51,7 +51,6 @@ function Home() {
         data: { results }
       } = await api.get('/person/popular')
 
-      console.log(results)
       setPopularPeople(results)
     }
 
