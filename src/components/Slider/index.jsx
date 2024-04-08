@@ -13,11 +13,12 @@ function Slider({ info, title }) {
         slidesPerView={'auto'}
         className="swiper"
       >
-        {info.map((item, index) => (
-          <SwiperSlide key={index}>
-            <Card item={item} />
-          </SwiperSlide>
-        ))}
+        {info &&
+          info.map((item, index) => (
+            <SwiperSlide key={index}>
+              <Card item={item} />
+            </SwiperSlide>
+          ))}
       </Swiper>
     </Container>
   )
