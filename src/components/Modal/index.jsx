@@ -1,14 +1,14 @@
 import { useEffect, useState } from 'react'
 
-import { getFilm } from '../../services/getData'
+import { getMovieVideo } from '../../services/getData'
 import { Background, Container } from './styles'
 
-function Modal({ movieId, setShowModal }) {
+export function Modal({ movieId, setShowModal }) {
   const [movie, setMovie] = useState()
 
   useEffect(() => {
     async function getMovie() {
-      setMovie(await getFilm(movieId))
+      setMovie(await getMovieVideo(movieId))
     }
 
     getMovie()
@@ -21,7 +21,7 @@ function Modal({ movieId, setShowModal }) {
         <Container>
           <button onClick={() => setShowModal(false)}>X</button>
           <iframe
-            src={`https://www.youtube.com/embed/${movie.key}`}
+            src={`https://www.youtube.com/embed/${movie[0].key}`}
             title="Youtube Video Player"
             height="500px"
             width="100%"
@@ -31,5 +31,3 @@ function Modal({ movieId, setShowModal }) {
     </Background>
   )
 }
-
-export default Modal

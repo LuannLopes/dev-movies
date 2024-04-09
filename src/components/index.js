@@ -1,0 +1,7 @@
+export * from './Button'
+export * from './Card'
+export * from './Credits'
+export * from './Header'
+export * from './Modal'
+export * from './Slider'
+export * from './SpanGenres'

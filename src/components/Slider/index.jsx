@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import Card from '../Card'
 import { Container } from './styles'
 
-function Slider({ info, title }) {
+export function Slider({ info, title }) {
   return (
     <Container>
       <h2>{title}</h2>
@@ -23,5 +23,3 @@ function Slider({ info, title }) {
     </Container>
   )
 }
-
-export default Slider

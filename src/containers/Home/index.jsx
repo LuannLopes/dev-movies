@@ -1,9 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
-import Button from '../../components/Button'
-import Modal from '../../components/Modal'
-import Slider from '../../components/Slider'
+import { Button, Modal, Slider } from '../../components'
 import {
   getMovies,
   getPopularPeople,
@@ -14,7 +12,7 @@ import {
 import getImages from '../../utils/getImages'
 import { Background, Container, ContainerButtons, Info, Poster } from './styles'
 
-function Home() {
+export function Home() {
   const [showModal, setShowModal] = useState(false)
   const [movies, setMovies] = useState()
   const [topMovies, setTopMovies] = useState()
@@ -83,5 +81,3 @@ function Home() {
     </>
   )
 }
-
-export default Home

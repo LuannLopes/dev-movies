@@ -1,7 +1,7 @@
 import getImages from '../../utils/getImages'
 import { Container } from './styles'
 
-function Card({ item }) {
+export function Card({ item }) {
   return (
     <Container>
       <img src={getImages(item.poster_path || item.profile_path)} />
@@ -9,5 +9,3 @@ function Card({ item }) {
     </Container>
   )
 }
-
-export default Card

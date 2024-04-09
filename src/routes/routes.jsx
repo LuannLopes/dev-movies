@@ -1,10 +1,7 @@
 import { Routes, Route } from 'react-router-dom'
 
-import Detail from '../containers/Detail'
-import Home from '../containers/Home'
+import { Detail, Home, Movies, Series } from '../containers'
 import DefaultLayout from '../layout/DefaultLayout'
-import Movies from './../containers/Movies'
-import Series from './../containers/Series'
 
 function Router() {
   return (
